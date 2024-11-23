@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --black: black;
+  --white: white;
+  --yellow: #f6d200;
+  --body-color: #ededed;
+}
+
+/*
+1rem = 16px
+
+*/
+body {
+  background-color: var(--body-color);
+}
+
+header {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--black);
+}
+header h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+header ul {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+header ul li {
+  list-style-type: none;
+  color: var(--yellow);
+  font-style: italic;
+}
+nav {
+  background-color: var(--yellow);
+}
+nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  padding: 15px 0px;
+  list-style-type: none;
+  font-weight: 600;
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+main {
+  padding: 20px;
+  display: flex;
+  gap: 50px;
+}
+#left-side {
+  flex-basis: 75%;
+}
+#right-side {
+  flex-basis: 25%;
+}
+.categories-item {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.categories-item h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.categories-item p {
+  margin-left: 15px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+}
+.movie-items .name {
+  background-color: var(--yellow);
+  padding: 15px 0px;
+  color: var(--black);
+  margin-top: -5px;
+  text-align: center;
+}
+.movie-items img {
+  width: 100%;
+}
+.movie-content {
+  background-color: var(--white);
+  padding: 20px;
+}
+.movie-half {
+  flex-basis: 48%;
+}
+.movie-third-width {
+  flex-basis: 31%;
+}
+.heading-first {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px 0px;
+}
+#movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.sport-movie {
+  display: flex;
+  margin-bottom: 20px;
+}
+.sport-movie img {
+  width: 100%;
+  height: 100%;
+}
+
+.sport-movie-section-one {
+  flex-basis: 40%;
+}
+.sport-movie-section-two {
+  flex-basis: 60%;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sport-movie-section-two p,
+.sport-movie-section-two h2 {
+  margin-bottom: 10px;
+}
+.sport-movie-section-two a {
+  color: white;
+}
+.sport-movie-2 {
+  flex-direction: row-reverse;
+}
+
+#download-section img {
+  width: 100%;
+}
+#download-body {
+  display: flex;
+  margin-top: -5px;
+}
+
+#download-body-1 {
+  background-color: var(--black);
+  color: var(--white);
+  flex-basis: 20%;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#download-body-1 p {
+  margin-bottom: 5px;
+}
+#download-body-2 {
+  background-color: var(--white);
+  flex-basis: 60%;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#download-body-2 h2 {
+  font-size: 1rem;
+}
+
+#download-body-3 {
+  background-color: var(--yellow);
+  flex-basis: 20%;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#download-body-3 h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.download-items {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+#cast-images img {
+  width: 60px;
+  border-radius: 50%;
+}
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-items {
+  flex-grow: 1;
+  margin-bottom: 4px;
+  margin-left: 8px;
+}
+.gallery-items img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+/* 4ro div me phli div */
+.gallery-items:nth-child(4n + 1) {
+  flex-basis: 260px;
+}
+
+/* 4ro div me 2sri div */
+.gallery-items:nth-child(4n + 2) {
+  flex-basis: 325px;
+}
+
+/* 4ro div me 3sri div */
+.gallery-items:nth-child(4n + 3) {
+  flex-basis: 180px;
+}
+
+/* 4ro div me 4th  div */
+.gallery-items:nth-child(4n + 4) {
+  flex-basis: 380px;
+}
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 0px;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 1251px) {
+  #movie-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1150px) {
+  .sport-movie,
+  .download-items,
+  #download-body {
+    flex-direction: column;
+  }
+  .sport-movie-section-two {
+    padding: 30px 0px;
+  }
+  main {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+  #cast-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  header h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 580px) {
+  html {
+    font-size: 14px;
+  }
+}
